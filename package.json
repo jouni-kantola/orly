@@ -1,0 +1,25 @@
+{
+  "name": "orly",
+  "version": "1.0.0",
+  "description": "pub/sub",
+  "main": "src/index.js",
+  "repository": "git@github.com:jouni-kantola/orly.git",
+  "author": "Jouni Kantola <jouni@kantola.se>",
+  "license": "MIT",
+  "dependencies": {
+    "ava": "^0.22.0",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
+    "typescript": "^2.5.3"
+  },
+  "scripts": {
+    "test": "tsc && ava",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
